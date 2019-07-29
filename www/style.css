@@ -1,0 +1,1060 @@
+/*
+© Copyright World Health Organization (WHO) 2016.
+This file is part of the Health Equity Assessment Toolkit (HEAT).
+HEAT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License Version 2 as published by
+the Free Software Foundation.
+
+HEAT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with HEAT. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*This puts the navbar-nav (pulldowns) to right
+The issue was that if we set to 100% it would change
+width depending on if the page had scrollbars. The setup is
+
+navbar
+    container
+        navbar-collapse
+        etc
+
+The container was the issue being set to a specific width
+based on the spacelab styles
+*/
+
+/*wider and narrower table columns*/
+
+.wider{
+    width: 300% !important;
+}
+
+.narrower{
+    width: 400px !important;
+}
+
+.font-10 {
+  font-size: 10px !important;
+}
+
+@media (min-width: 900px){
+.container {
+    width: 830px;
+}
+}
+@media (min-width: 1000px){
+.container {
+    width: 930px;
+}
+}
+@media (min-width: 1100px){
+.container {
+    width: 1030px;
+}
+}
+@media (min-width: 1200px){
+.container {
+    width: 1130px;
+}
+}
+@media (min-width: 1300px){
+.container {
+    width: 1230px;
+}
+}
+@media (min-width: 1400px){
+.container {
+    width: 1330px;
+}
+}
+@media (min-width: 1500px){
+.container {
+    width: 1430px;
+}
+}
+@media (min-width: 1600px){
+.container {
+    width: 1530px;
+}
+}
+
+
+/* for the modal agreement text*/
+
+.modal-body{
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+
+#modal-license{
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-bottom:20px;
+}
+
+#modal-license>h1{
+    margin-top:0;
+    padding-top: 0;
+}
+
+
+
+/*
+.container{
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+*/
+
+/*the big title text in jumbotron*/
+h1.landing{
+    text-shadow: 1px 1px #36AAE4;
+    color: rgb(79,112, 153);
+    font-weight: bold;
+    /*margin-left: 10%;*/
+    font-size: 3em;
+    /*float:right;*/
+    /*max-width: 600px;*/
+    text-align: center;
+	line-height: 48px;
+}
+
+
+.italic{
+  font-style: italic;
+  font-size: 14px;
+}
+
+
+.tooltip-inner {
+    max-width: 300px;
+    /* If max-width does not work, try using width instead */
+    width: 300px; 
+	padding: 12px 12px;
+  text-align: left;
+  background-color:#424040;
+}
+
+.tooltip.in{opacity:1!important;}
+
+span.subhead{
+   color: rgb(214, 77, 51);
+   text-shadow: 1px 1px #DAA6A6; 
+}
+
+/* The text under the main title */
+p.lead{
+    font-weight: bold;
+    font-size: 1.5em;
+    /*max-width: 600px;*/
+    text-align: center;
+/*    float:right;*/
+}
+
+#download-well {
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+#download-well .well{
+	padding: 40px;
+	background-color: rgb(230, 230, 230);
+}
+
+#download-well .well h4 {
+	line-height: 24px;
+}
+
+label[for=datafoldername]{
+	margin-bottom: 0px;
+}
+
+/* so there is no gap right after navbar before image*/
+.navbar{
+    margin-bottom: 0px;
+}
+
+/* */
+#backimg-upload{
+    background-image: url("bars_grbu.png");
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    margin-left:-15px;
+    margin-right:-15px;
+    /*margin-left: -32px;*/
+    /*margin-top: -20px;*/
+}
+
+
+/* backimg is the div with bars*/
+#backimg-whodata{
+    background-image: url("bars.png");
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    margin-left:-15px;
+    margin-right:-15px;
+    /*margin-left: -32px;*/
+    /*margin-top: -20px;*/
+}
+
+/* Make the well in the jumbotron transparent*/
+.welltrans {
+   background-color: rgba(245, 245, 245, 0);
+   margin-bottom: 0px;
+   /*max-width: 800px;*/
+   margin-top:20px;
+
+}
+
+
+.bottomtext{
+    font-size: 120%;
+    margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+.citation{
+    margin-top:20px;
+    font-size: 100%;
+}
+
+/*@media (max-width: 768px){
+    .welltrans{
+        margin-top:60px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width:990px){
+    .welltrans{
+        margin-top:60px;
+    }
+}
+*/
+/* if screen is 768 or smaller drop the 
+WHO image */
+@media (max-width: 768px){
+
+    .whoimg{
+        display: none;
+    }
+}
+
+/* make the list of pulldowns float right*/
+.navbar-nav{
+    float:right;
+}
+
+/* make the pull down selector less tall */
+/*.navbar-nav>li>a, .navbar-nav>li>a:hover{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    line-height: 20px;
+}
+*/
+
+/* here is the piece that makes it break sooner in the navbar
+http://stackoverflow.com/questions/28659556/change-navbar-breakpoint-in-bootstrap-3-3-2
+*/
+@media (max-width: 1100px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+
+/* this next section gives padding etc to the image and 
+title */
+.navtitle{
+    position: relative;
+     font-weight:bold;
+     display: block;
+     margin-top: -15px;
+     margin-right: 5px;
+     height: 50px;
+     padding-top: 5px;
+     text-align: left;
+}
+.whoimg{
+    vertical-align: middle;
+    max-height: 40px;
+    float: left;
+    margin-right: 25px;
+}
+.navtext{
+    display: inline-block;
+    height: 100%;
+    padding-top: 12px;
+        font-size: 1em;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+
+        background-color:  rgba(229, 102, 33, 0.8);
+    background-position: 0 -1690px;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+
+
+
+
+
+/*tabs inside page*/
+
+.nav-tabs>li>a:hover, 
+.nav-tabs>li>a:focus,
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a>h6{
+    background-color: #E6E6E6;
+    font-weight: bold;
+
+}
+
+.nav-tabs>li>a{
+    background-color: #f2f2f2; /*hsv 0,0,94 */
+}
+
+
+.nav-tabs {
+    margin-top: 10px;
+}
+
+
+/*The about text (manual, license etc) header*/
+
+.aboutheader{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 210%;
+}
+
+
+/*The about text (manual, license etc) body*/
+.aboutcontainer{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/*dropdown*/
+
+
+ .dropdown-menu > li > a:hover, 
+ .dropdown-menu > li > a:focus, 
+ .dropdown-menu > li > a:active, 
+ .dropdown-menu>.active>a, 
+ .dropdown-menu>.active>a:hover, 
+ .dropdown-menu>.active>a:focus {
+            background-color:#E8E7E7;
+ }
+
+
+
+/* TABLE*/
+
+/*thead{
+    color: #5A5959;
+    background-color: #E8E7E7;
+}
+*/
+/*table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px !important;
+    border-bottom: 3px solid red !important;
+}
+*/
+
+div.dataTables_scrollFoot table input[type="text"]{
+    background-color: #f9f9f9
+}
+
+.container{
+        margin-left: 5px;
+}
+
+
+
+
+.datawarning{
+  /*margin-top:10px;
+  margin-right:30px;
+  margin-left:30px;*/
+}
+
+.button-holder{
+    margin-left:5px;
+    margin-top:15px;
+}
+.col-sm-4 {
+    width: 35%;
+    padding-right:5px;
+}
+
+.col-sm-8 {
+    width: 65%;
+    padding-left:5px;
+}
+
+
+input#main_title1 {
+    margin-bottom: -10px;
+}
+
+input#xaxis_title1 {
+    margin-bottom: -10px;
+}
+
+input#yaxis_title1 {
+    margin-bottom: -10px;
+}
+
+input#main_title2 {
+    margin-bottom: -10px;
+}
+
+input#xaxis_title2 {
+    margin-bottom: -10px;
+}
+
+input#yaxis_title2 {
+    margin-bottom: -10px;
+}
+
+input#main_title3 {
+    margin-bottom: -10px;
+}
+
+input#xaxis_title3 {
+    margin-bottom: -10px;
+}
+
+input#yaxis_title3 {
+    margin-bottom: -10px;
+}
+
+input#main_title4 {
+    margin-bottom: -10px;
+}
+
+input#xaxis_title4 {
+    margin-bottom: -10px;
+}
+
+input#yaxis_title4 {
+    margin-bottom: -10px;
+}
+
+
+#axis_limitsmin3{
+    margin-bottom:10px;
+}
+
+#summary_CI_type{
+    
+}
+
+#yaxis_limitsmin4{
+    margin-bottom:10px;
+}
+
+.sectionhead1{
+     font-size: 1.5em;
+     padding-bottom: 10px;
+     font-weight: bold;
+     text-shadow: 1px 1px #fff;
+}
+
+.sectionhead{
+     font-size: 1.3em;
+     padding-bottom: 10px;
+     font-weight: bold;
+     text-shadow: 1px 1px #fff;
+}
+.sectionhead:before{
+ content: "";
+    display: block;
+    height: 1px;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*background: #eeeeee;*/
+    border: 0;
+    border-bottom: 1px dashed #fff;
+    margin-left: 20px;
+}
+
+
+.collapsesectionhead{
+     font-size: 1.3em;
+     padding-bottom: 10px;
+     font-weight: bold;
+     text-shadow: 1px 1px #fff;
+     color:#666666;
+     
+}
+
+.collapsesectionhead.collapsed:after{
+     font-family: 'Font Awesome 5 Free';
+     content: "\f101";
+     padding-left: 5px;
+     font-weight: 900;
+    
+}
+
+.collapsesectionhead:after{
+     font-family: 'Font Awesome 5 Free';
+     content: "\f103";
+     padding-left: 5px;
+     font-weight: 900;
+
+}
+
+
+a.collapsesectionhead:hover, a.collapsesectionhead:focus, a.collapsesectionhead:active, a.collapsesectionhead:visited{
+  color:#666666;
+  text-decoration: initial;
+}
+
+
+
+
+
+
+
+.control-label{
+
+     font-size: 1.1em;
+     /*font-weight: bold; */
+     display: block;
+     padding-bottom: 10px;
+     padding-top:10px;
+
+}
+
+
+
+.axis-title-label label {
+font-weight: normal;
+}
+
+.axis-range{
+  font-size: 1.1em;
+  font-weight: bold;
+    padding-top:20px;
+}
+
+
+.graph-names{
+   font-size: 1.1em;
+  font-weight: bold;
+}
+
+
+.well {
+     /*padding: 12px;*/
+     margin-bottom: 5px;
+     /*max-width: 280px;*/
+     /*background-color: #e0dede;*/
+     background-color: #F7F7F7;
+    border: 1px solid #E5E5E5;
+ }
+
+
+
+label.radio {
+     display: inline-block;
+ }
+ 
+.radio input[type="radio"] {
+     float: none;
+ }
+ 
+/*select {
+     max-width: 200px;
+     font-size: 50%;
+ }*/
+ 
+textarea {
+     max-width: 185px;
+ }
+ 
+.jslider {
+     max-width: 200px;
+ }
+ 
+
+
+
+.span4 {
+     max-width: 280px;
+ }
+
+ 
+
+ 
+.input-custom {
+     max-width: 50px;
+ }
+
+
+.axis-minmax label {
+font-weight: normal;
+width:100px;
+}
+
+.axis-minmax div {
+height:35px;
+margin-right: 7px;
+}
+
+
+.axis-minmax-dtl label{
+    font-weight:normal;
+    width:167px;
+}
+
+
+ .axis-minmax-dtl div{
+    height:35px;
+    margin-right: 7px;
+}
+
+/*Center table columns that have this class if you decide you want
+only the data (not the header) to be centered then you can use 
+td.table-text-center instead*/
+.table-text-center{
+    text-align:center;
+}
+
+/*Remove the left padding from table headers*/
+th.table-text-nocenter{
+    padding-left: 8px !important;
+}
+
+/* Change the navbar color*/
+ /*background-image: linear-gradient(#6d94bf, #446e9b 50%, #3e648d);*/
+.navbar-inverse{
+
+ background-image: linear-gradient(#6d94bf, #446e9b 50%, rgb(79, 112, 153));
+
+}
+
+
+/* This is the upload progress indicator */
+
+.shiny-progress .progress-text{
+  background-color: green;
+  width:300px;
+  height:40px;
+  color: white;
+  text-size: 1.3em;
+}
+
+/* This is the panel related to the collapses */
+
+.panel-default{
+  border-width: 0;
+}
+
+.panel-heading{
+  padding: 10px 0;
+  
+}
+
+
+.panel-default>.panel-heading{
+  background-color: #F7F7F7;
+}
+
+.panel-body{
+  background-color: #F7F7F7;
+  padding-left: 0;
+}
+
+
+
+#table_result{well
+    /*background-color: rgb(220, 220, 220); */
+	text-align: center;
+	margin-top: 20px;
+}
+
+#table_result .datawarning{
+	/*padding: 20px 15px;*/
+	color: #990A1A;
+}
+
+
+#table_result .datasuccess{
+	/*padding: 20px 15px;*/
+	color: grey;/*#177a06;*/
+}
+
+
+.msg_upload {
+	font-size: 1.2em;
+	font-weight: bold;
+	/*display: block;*/
+	margin-bottom: 6px;
+}
+
+
+#upload_excel_sheetnum{
+max-width: 92px;
+}
+
+#doBS{
+text-align: center;
+}
+
+#doBS .control-label{
+padding-bottom: 0px !important;
+}
+
+
+
+/*This is all for the check boxes on main page*/
+
+
+.control {
+    /*font-size: 26px;*/
+    position: relative;
+    display: block;
+    /*margin-bottom: 15px;*/
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.control .control-text{
+display: block;
+padding-top: 2px;
+font-weight: normal !important;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #afaaaa;
+}
+
+.control-radio .control__indicator {
+    border-radius: 50%;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: #8e8d8d;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+    background: rgb(79,112, 153);
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: #0e647d;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+    pointer-events: none;
+    opacity: .6;
+    background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+
+
+
+/* Radio button inner circle */
+.control-radio .control__indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* Disabled circle colour */
+.control-radio input:disabled ~ .control__indicator:after {
+    background: #7b7b7b;
+}
+
+
+
+.dataselection{
+    background-color: black;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    /*margin: 10px;*/
+	margin: 0px 0px 6px 0px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+
+
+
+#backimg hr{
+display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dotted rgb(175, 175, 175);
+    /*margin: 1em 0;
+    padding: 0; */
+
+}
+
+
+#filename{
+  max-width: 70%
+}
+
+            
+.row {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+
+div.busy-indicator {
+  position:absolute;
+
+        left: calc(50% - 200px);
+    top: calc(50% - 10px);
+
+  display:none;
+    text-align: center;
+  /*background: rgba(255, 255, 255, .5);*/
+
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  border-radius: 5px;
+  z-index:1000;
+}
+
+#download-well div.busy-indicator{
+    left: calc(50% - 110px);
+    top: calc(50% - 120px);
+}
+
+
+
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* for the panel in the graph options */
+
+.panel-body{
+  padding-top: 15px;
+  padding-right: 0;
+}
+
+.longerselect{
+  padding-right: 0;
+}
+
+/* upload file styles */
+
+#upload-browse .form-group > .input-group + div {
+  margin-top: 5px;  
+}
+
+#upload-browse .form-group + .form-group {
+  margin-top: -10px;  
+}
+
+#filename_progress .processing,
+#filename_progress .ready {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 1rem;
+  /* content: attr(data-ready); */
+  color: #000;
+  opacity: 0.9;
+}
+
+#filename_progress .ready {
+  display: none;
+}
+
+#filename_progress.complete .processing {
+  display: none;
+}
+
+#filename_progress.complete .ready {
+  display: flex;
+}
+
+/*#filename_progress.processing::before {
+  content: attr(data-processing);
+}*/
+
+#filename_progress .progress-bar {
+  background-color: rgb(34, 177, 76, 0.6) !important;
+  font-size: 0;
+}
+
+.highcharts-legend-item {
+  cursor: default;
+}
+
+.highcharts-legend-item text,
+.highcharts-legend-item span {
+  cursor: default !important;
+}
+
+.modal-zoom-chart {
+  padding: 15px;
+}
+  
+.modal-zoom-chart .modal-dialog {
+  width: 90%;
+  height: 100%;
+  margin: auto;  
+  padding: 0;
+}
+  
+.modal-zoom-chart .modal-content {
+  height: auto;    
+}
+
+.modal-zoom-chart .highchart {
+  width: 100%;
+  height: 700px;
+  min-height: 700px;
+}
+
+.modal-zoom-chart .highcharts-title,
+.modal-zoom-chart .highcharts-subtitle {
+  color: #333 !important;
+  font-family: Roboto Condensed !important;
+  font-weight: normal !important;
+  fill: #333 !important;
+}
+
+.hide-small-ticks .irs-grid-pol.small {
+  display: none;
+}
+
+.nav-tabs {
+  display: flex !important;
+}
+
+.nav-tabs li {
+  display: flex !important;
+  flex: 1 !important;
+}
+
+.nav-tabs li a {
+  flex: 1 !important;
+}
+
+.nav-tabs > li > a {
+  border-color: white;
+}
+
+.nav-tabs.nav-justified > li > a {
+  border-radius: 8px 8px 0 0;
+}
+
+

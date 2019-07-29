@@ -1,0 +1,159 @@
+.box {
+  display: inline-block;
+  /*float:left;*/
+  min-height: 1px;
+  padding-right: 0px;
+}
+
+
+.box-dtl {
+  display: inline-block;
+  min-height: 1px;
+  padding-right: 0px;
+}
+
+.box-dtl-title {
+  position: absolute;
+  top:45%;
+  right:10px;
+}
+
+.titlehc {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+      font-size: 18px;
+    font-weight: bold;
+}
+
+.facet {
+  font-size: 1em;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  color: #606060;
+}
+
+/*This is the indicator title*/
+.facetind {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    color: #696363;
+    border-radius: 10px;
+
+}
+
+/*This is the dimension title*/
+.facetdim {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  font-weight: bold;
+          color: #696363;
+          margin-right:3%;
+}
+
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.chartbox{
+   /* border-style: dotted;
+    border-width: 0.5px;*/
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.titlex{
+  font-size: 15px;
+  font-weight: normal;
+  font-family: Roboto;
+}
+
+.highcharts-tooltip span {
+  height:auto !important;
+  width:140px !important;
+  max-width:140px !important;
+  overflow:auto !important;
+  white-space:normal !important; 
+}
+
+
+
+
+.tooltip-bold-bigger{
+  font-weight:900;
+  font-size: 1.1em;
+}
+
+.tooltip-bold{
+  font-weight:900;
+  font-size: 1.1em;
+}
+
+/*Table for detailed bar expandable div*/
+.rdtable{
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.btn-grey {
+  background-color: #666;
+  margin-bottom: 10px;
+}
+
+/*
+#disag_plot_explore_dtl_insideHC{
+  position: relative;
+}
+
+.titlebox{
+  top:45%;
+  position:absolute;
+  right:20px;
+}
+*/
+
+.box-dtl-container{
+  
+}
+
+.highcharts-color-natl-boundary {
+    stroke: black;
+    stroke-width: 1;
+    /*stroke-dasharray: 5,2;*/
+}
+
+.highcharts-color-disputed-boundary {
+    stroke: grey;
+    stroke-width: 1;
+    stroke-dasharray: 5,2;
+}
+
+.plot-etc-holder{
+  position: relative;
+}
+
+.grid-holder{
+  margin-left:50px;
+}
+
+.y-axis{
+  position:absolute;
+  left:10px;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.rowchart-holder{
+  position:relative;
+}
+
+.indicator-title{
+  position:absolute;
+  right:10px;
+  top:45%;
+  transform: translateY(-50%);
+}

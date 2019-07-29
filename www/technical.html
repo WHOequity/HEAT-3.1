@@ -1,0 +1,1300 @@
+﻿<!--
+© Copyright World Health Organization (WHO) 2016-2019.
+This file is part of the Health Equity Assessment Toolkit (HEAT).
+HEAT is free software: you can redistribute it and/or modify it 
+under the terms of the GNU General Public License Version 2 as 
+published by the Free Software Foundation.
+
+HEAT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with HEAT. If not, see http://www.gnu.org/licenses/.
+-->
+
+<div class="aboutcontainer">
+<h1 class="aboutheader"><a id="Top" name="Top"></a>Technical notes</h1>
+
+<p>&nbsp;</p>
+
+<p>Click <a href="Technical_notes.pdf" target="_blank">here</a> to download the technical notes (pdf format).</p>
+
+<p>&nbsp;</p>
+
+<h3>Contents</h3>
+
+<p><a href="#1. Introduction">1. Introduction</a></p>
+
+<p><a href="#2. Disaggregated data">2. Disaggregated data</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.1 Health indicators">2.1 Health indicators</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.2 Dimensions of inequality">2.2 Dimensions of inequality</a></p>
+
+<p><a href="#3. Summary measures">3. Summary measures</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1 Absolute measures">3.1 Absolute measures</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.1 Absolute concentration index">3.1.1 Absolute concentration index</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.2 Between-group standard variation">3.1.2 Between-group standard variation</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.3 Between-group variance">3.1.3 Between-group variance</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.4 Difference">3.1.4 Difference</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.5 Population attributable risk">3.1.5 Population attributable risk</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.6 Slope index of inequality">3.1.6 Slope index of inequality</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.7 Unweighted mean difference from best performing subgroup">3.1.7 Unweighted mean difference from best performing subgroup</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.8 Unweighted mean difference from mean">3.1.8 Unweighted mean difference from mean</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.9 Weighted mean difference from best performing subgroup">3.1.9 Weighted mean difference from best performing subgroup</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.1.10 Weighted mean difference from mean">3.1.10 Weighted mean difference from mean</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2 Relative measures">3.2 Relative measures</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.1 Coefficient of variation">3.2.1 Coefficient of variation</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.2 Mean log deviation">3.2.2 Mean log deviation</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.3 Population attributable fraction">3.2.3 Population attributable fraction</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.4 Ratio">3.2.4 Ratio</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.5 Relative concentration index">3.2.5 Relative concentration index</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.6 Relative index of inequality">3.2.6 Relative index of inequality</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.7 Theil index">3.2.7 Theil index</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.8 Index of disparity">3.2.8 Index of disparity</a></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2.9 Index of disparity (weighted)">3.2.9 Index of disparity (weighted)</a></p>
+
+<p>&nbsp;</p>
+
+<h3><a id="1. Introduction" name="1. Introduction"></a>1. Introduction</h3>
+
+<p>The Health Equity Assessment Toolkit (HEAT) enables the assessment of within-country inequalities, i.e. inequalities that exist between population subgroups within a country, based on disaggregated data and summary measures of inequality. Disaggregated data show the level of health by population subgroup of a given dimension of inequality. Summary measures build on disaggregated data and present the degree of inequality across multiple population subgroups in a single numerical figure. These technical notes provide information about the disaggregated data (section 2) and the summary measures (section 3) presented in HEAT.&nbsp;</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="2. Disaggregated data" name="2. Disaggregated data"></a>2. Disaggregated data</h3>
+
+<p>HEAT comes built in with the <a href="http://apps.who.int/gho/data/node.main.HE-1540?lang=en" target="_blank">WHO Health Equity Monitor database</a> (2019 update). The database currently contains over 30 reproductive, maternal, newborn and child health (RMNCH) indicators, disaggregated by six dimensions of inequality. Data are based on re-analysis of more than 360 Demographic and Health Surveys (DHS), Multiple Indicator Cluster Surveys (MICS) and Reproductive Health Surveys (RHS) conducted in 112 countries between 1991 and 2017. For 88 countries (79%), data are available for at least two time points (i.e. multiple rounds of data exist). A full list of study countries, with corresponding ISO3 country codes and information about survey source(s) and year(s) is given in Supplementary table 1 in the pdf version of the technical notes, which can be accessed <a href="Technical_notes.pdf" target="_blank">here</a>.</p>
+
+<p>Micro-level DHS, MICS and RHS data were analysed by the WHO Collaborating Center for Health Equity Monitoring (International Center for Equity in Health, Federal University of Pelotas, Brazil). Survey design specifications were taken into consideration during the analysis. The same methods of calculation for data analysis were applied across all surveys to generate comparable estimates across countries and over time. Estimates of disaggregated data are presented alongside 95% confidence intervals, and the population share of the subgroup. The population share for each indicator is the percentage of the affected population &ndash; the indicator denominator &ndash; represented by the subgroup in a given country.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="2.1 Health indicators" name="2.1 Health indicators"></a>2.1 Health indicators</h3>
+
+<p>Table 1 lists the RMNCH indicators currently available in the WHO Health Equity Monitor database. Detailed information about the criteria used to calculate the numerator and denominator values for each indicator are available in the indicator compendium or in the (<a href="https://www.who.int/gho/indicator_registry/en/" target="_blank">WHO Indicator and Measurement Registry</a>), under the topic Health Equity Monitor.</p>
+
+<p><strong>Table 1 Health indicators</strong></p>
+
+<table border="1" cellpadding="10" cellspacing="0" width="800px">
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;"><strong>Indicator name</strong></span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;"><strong>Indicator</strong></span></p>
+
+			<p><span style="font-size:14px;"><strong>abbreviation</strong></span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;"><strong>Indicator</strong></span></p>
+
+			<p><span style="font-size:14px;"><strong>type</strong></span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;"><strong>Indicator</strong></span></p>
+
+			<p><span style="font-size:14px;"><strong>scale</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Adolescent fertility rate (births per 1000 women aged 15-19 years)*</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">asfr1</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">1000</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Antenatal care coverage - at least four visits (in the five years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">anc45</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Antenatal care coverage - at least four visits (in the two or three years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">anc4</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Antenatal care coverage - at least one visit (in the five years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">anc15</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Antenatal care coverage - at least one visit (in the two or three years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">anc1</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">BCG immunization coverage among one-year-olds (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vbcg</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Births attended by skilled health personnel (in the five years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">sba5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Births attended by skilled health personnel (in the two or three years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">sba</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Births by caesarean section (in the five years preceding the survey) (%)**</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">csection5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Births by caesarean section (in the two or three years preceding the survey) (%)**</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">csection</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Children aged 6-59 months who received vitamin A supplementation (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vita</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Children aged &lt; 5 years sleeping under insecticide-treated nets (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">itnch</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Children aged &lt; 5 years with diarrhoea receiving oral rehydration salts (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">ors</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Children aged &lt; 5 years with diarrhoea receiving oral rehydration therapy and continued feeding (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">ort</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Children aged &lt; 5 years with pneumonia symptoms taken to a health facility (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">carep</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Composite coverage index (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">cci</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Contraceptive prevalence - modern and traditional methods (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">cpmt</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Contraceptive prevalence - modern methods (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">cpmowho</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">DTP3 immunization coverage among one-year-olds (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vdpt</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Demand for family planning satisfied - modern and traditional methods (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">fps</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Demand for family planning satisfied - modern methods (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">fpsmowho</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Early initiation of breastfeeding (in the five years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">bfearly5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Early initiation of breastfeeding (in the two years preceding the survey) (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">bfearly</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Full immunization coverage among one-year-olds (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vfull</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Infant mortality rate (deaths per 1000 live births)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">imr</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">1000</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Measles immunization coverage among one-year-olds (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vmsl</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Neonatal mortality rate (deaths per 1000 live births)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">nmr</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">1000</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Obesity prevalence in non-pregnant women aged 15-49 years, BMI &gt;= 30 (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">bmi30wm</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Polio immunization coverage among one-year-olds (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">vpolio</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Pregnant women sleeping under insecticide-treated nets (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">itnwm</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Favourable</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Stunting prevalence in children aged &lt; 5 years (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">stunt5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Total fertility rate (births per woman)*</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">tfr</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">1</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Under-five mortality rate (deaths per 1000 live births)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">u5mr</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">1000</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Underweight prevalence in children aged &lt; 5 years (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">uwgt5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:482px;height:20px;">
+			<p><span style="font-size:14px;">Wasting prevalence in children aged &lt; 5 years (%)</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:82px;height:20px;">
+			<p><span style="font-size:14px;">wast5</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:74px;height:20px;">
+			<p><span style="font-size:14px;">Adverse</span></p>
+			</td>
+			<td nowrap="nowrap" style="width:64px;height:20px;">
+			<p><span style="font-size:14px;">100</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style="font-size:12px;">*Note that the indicators &ldquo;Adolescent fertility rate&rdquo; and &ldquo;Total fertility rate&rdquo; are treated as adverse health outcome indicators, even though the minimum level may not be the most desirable situation (as is the case for other adverse outcome indicators, such as infant mortality rate).</span></p>
+
+<p><span style="font-size:12px;">**Note that the indicators &ldquo;Births by caesarean section (in the two or three years preceding the survey)&rdquo; and &ldquo;Births by caesarean section (in the five years preceding the survey)&rdquo; are treated as favourable health intervention indicators, even though the maximum level may not be the most desirable situation (as is the case for other favourable health intervention indicators, such as full immunization coverage).</span></p>
+
+<p>As indicated in table 1, health indicators can be divided into favourable and adverse health indicators. <strong>Favourable health indicators</strong> measure desirable health events that are promoted through public health action. They include health intervention indicators, such as antenatal care coverage, and desirable health outcome indicators, such as life expectancy. For these indicators, the ultimate goal is to achieve a maximum level, either in health intervention coverage or health outcome (for example, complete coverage of antenatal care or the highest possible life expectancy). <strong>Adverse health indicators</strong>, on the other hand, measure undesirable events, that are to be reduced or eliminated through public health action. They include undesirable health outcome indicators, such as stunting prevalence in children aged less than five years or under-five mortality rate. Here, the ultimate goal is to achieve a minimum level in health outcome (for example, a stunting prevalence or mortality rate of zero).</p>
+
+<p>Furthermore, health indicators can be reported at different indicator scales. For example, while total fertility rate is usually reported as the number of births per woman (indicator scale = 1), coverage of skilled birth attendance is reported as a percentage (indicator scale = 100) and neonatal mortality rate is reported as the number of deaths per 1000 live births (indicator scale = 1000).</p>
+
+<p>These characteristics are important as they impact on the calculation of summary measures (see section 2).</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="2.2 Dimensions of inequality" name="2.2 Dimensions of inequality"></a>2.2&nbsp;Dimensions of inequality</h3>
+
+<p>Health indicators from the WHO Health Equity Monitor database were disaggregated by six dimensions of inequality: economic status, education, place of residence and subnational region as well as age and sex (where applicable).</p>
+
+<p><strong>Economic status</strong> was determined using a wealth index. Country-specific indices were based on owning selected assets and having access to certain services, and constructed using principal component analysis. Within each country the index was divided into quintiles of households, thereby creating five equal subgroups that each account for 20% of the population. Note that certain indicators have denominator criteria that do not include all households and/or are more likely to include households from a specific quintile; thus the quintile share of the population for a given indicator may not equal 20%. For example, there are often more live births reported by the poorest quintile than the richest quintile, resulting in the poorest quintile representing a larger share of the population for indicators such as the coverage of births attended by skilled health personnel.</p>
+
+<p><strong>Education</strong> refers to the highest level of schooling attained by the woman (or the mother, in the case of newborn and child health interventions, child malnutrition and child mortality indicators).</p>
+
+<p>For <strong>place of residence</strong> and <strong>subnational region</strong>, country-specific criteria for place of residence and subnational region were applied.</p>
+
+<p>Table 2 lists the five dimensions of inequality available in the WHO Health Equity Monitor database along with their basic characteristics.</p>
+
+<p><strong>Table 2 Dimensions of inequality</strong></p>
+
+<table border="1" cellpadding="10" cellspacing="0" width="800">
+	<tbody>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;"><strong>Inequality dimension</strong></span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;"><strong>Dimension type</strong></span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;"><strong>Subgroups</strong></span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;"><strong>Subgroup order</strong></span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;"><strong>Reference subgroup</strong></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Age</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Binary dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">15-19 years</span></p>
+			<p><span style="font-size:14px;">20-49 years</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">20-49 years</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Economic status</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Ordered dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">Quintile 1 (poorest)</span></p>
+			<p><span style="font-size:14px;">Quintile 2</span></p>
+			<p><span style="font-size:14px;">Quintile 3</span></p>
+			<p><span style="font-size:14px;">Quintile 4</span></p>
+			<p><span style="font-size:14px;">Quintile 5 (richest)</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">1. Quintile 1 (poorest)</span></p>
+			<p><span style="font-size:14px;">2. Quintile 2</span></p>
+			<p><span style="font-size:14px;">3. Quintile 3</span></p>
+			<p><span style="font-size:14px;">4. Quintile 4</span></p>
+			<p><span style="font-size:14px;">5. Quintile 5 (richest)</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Education</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Ordered dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">No education</span></p>
+			<p><span style="font-size:14px;">Primary school</span></p>
+			<p><span style="font-size:14px;">Secondary school +</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">1. No education</span></p>
+			<p><span style="font-size:14px;">2. Primary school</span></p>
+			<p><span style="font-size:14px;">3. Secondary school +</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Place of residence</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Binary dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">Rural</span></p>
+			<p><span style="font-size:14px;">Urban</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">Urban</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Sex</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Binary dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">Female</span></p>
+			<p><span style="font-size:14px;">Male</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">Female</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:135px;">
+			<p><span style="font-size:14px;">Subnational region</span></p>
+			</td>
+			<td style="width:131px;">
+			<p><span style="font-size:14px;">Non-ordered dimension</span></p>
+			</td>
+			<td style="width:160px;">
+			<p><span style="font-size:14px;">Variable</span></p>
+			</td>
+			<td style="width:137px;">
+			<p><span style="font-size:14px;">N/A</span></p>
+			</td>
+			<td style="width:79px;">
+			<p><span style="font-size:14px;">None</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>At the most basic level, dimensions of inequality can be divided into <strong>binary dimensions</strong>, i.e. dimensions that compare the situation in two population subgroups (e.g. girls and boys), versus dimensions that look at the situation in more than two population subgroups (e.g. economic status quintiles).</p>
+
+<p>In the case of dimensions with more than two population subgroups it is possible to differentiate between dimensions with ordered subgroups and non-ordered subgroups. <strong>Ordered dimensions</strong> have subgroups with an inherent positioning and can be ranked. For example, education has an inherent ordering of subgroups in the sense that those with less education unequivocally have <em>less</em> of something compared to those with more education. <strong>Non-ordered dimensions</strong>, by contrast, have subgroups that are not based on criteria that can be logically ranked. Subnational regions are an example of non-ordered groupings.</p>
+
+<p>For ordered dimensions, subgroups can be ranked from the most-disadvantaged to the most-advantaged subgroup. The subgroup order defines the rank of each subgroup. For example, if education is categorized in three subgroups (no education, primary school, and secondary school or higher), then subgroups may be ranked from no education (most-disadvantaged subgroup) to secondary school or higher (most-advantaged subgroup).</p>
+
+<p>For binary and non-ordered dimensions, while it is not possible to rank subgroups, it is possible to identify a reference subgroup, that serves as a benchmark. For example, for subnational regions, the region with the capital city may be selected as the reference subgroup in order to compare the situation in all other regions with the situation in the capital city.</p>
+
+<p>These characteristics are important as they impact on the calculation of summary measures (see section 2).</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="3. Summary measures" name="3. Summary measures"></a>3. Summary measures</h3>
+
+<p>HEAT enables the assessment of inequalities using multiple summary measures of inequality. Summary measures are calculated based on disaggregated data from the <a href="http://apps.who.int/gho/data/node.main.HE-1540?lang=en" target="_blank">WHO Health Equity Monitor database</a> (2019 update), combining estimates of a given health indicator for two or more subgroups into a single numerical figure. Supplementary table 2 in the pdf version of the technical notes, which can be accessed <a href="Technical_notes.pdf" target="_blank">here</a>,&nbsp;lists the 19 summary measures currently available in HEAT along with their basic characteristics, formulas and interpretation.</p>
+
+<p>Summary measures of inequality can be divided into absolute measures and relative measures. For a given health indicator, <strong>absolute inequality measures</strong> indicate the magnitude of difference in health between subgroups. They retain the same unit as the health indicator.<a href="#Footnote 1">[1]</a> <strong>Relative inequality measures</strong>, on the other hand, show proportional differences in health among subgroups and have no unit.</p>
+
+<p>Furthermore, summary measures may be weighted or unweighted. <strong>Weighted measures</strong> take into account the population size of each subgroup, while <strong>unweighted measures</strong> treat each subgroup as equally sized. Importantly, simple measures are always unweighted and complex measures may be weighted or unweighted.</p>
+
+<p><strong>Simple measures</strong> make pairwise comparisons between two subgroups, such as the most and least wealthy. They can be calculated for all health indicators and dimensions of inequality. The characteristics of the indicator and dimension determine which two subgroups are compared to assess inequality. Contrary to simple measures, <strong>complex measures</strong> make use of data from all subgroups to assess inequality. They can be calculated for all health indicators, but they can only be calculated for dimensions with more than two subgroups.<a href="#Footnote 2">[2]</a></p>
+
+<p>Complex measures can further be divided into ordered complex measures and non-ordered complex measures of inequality. <strong>Ordered measures</strong> can only be calculated for dimensions with more than two subgroups that have a natural ordering. Here, the calculation is also influenced by the type of indicator (favourable vs. adverse). <strong>Non-ordered measures</strong> are only calculated for dimensions with more than two subgroups that have no natural ordering.<a href="#Footnote 3">[3]</a>&nbsp;</p>
+
+<p>The following sections give further information about the definition, calculation and interpretation of each summary measure of inequality. Further information about summary measures of inequality can be found in the <a href="http://www.who.int/gho/health_equity/handbook/en/" target="_blank">Handbook on health inequality monitoring: with a special focus on low- and middle-income countries</a>.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="3.1 Absolute measures" name="3.1 Absolute measures"></a>3.1 Absolute measures</h3>
+
+<h4><a id="3.1.1 Absolute concentration index" name="3.1.1 Absolute concentration index"></a>3.1.1 Absolute concentration index</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The absolute concentration index (ACI) is a complex, weighted measure of inequality that shows the health gradient across multiple subgroups with a natural ordering, on an absolute scale. It indicates the extent to which a health indicator is concentrated among the disadvantaged or the advantaged.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>The calculation of ACI is based on a ranking of the whole population from the most-disadvantaged subgroup (at rank zero or 0) to the most-advantaged subgroup (at rank 1), which is inferred from the ranking and size of the subgroups. The relative rank of each subgroup is calculated as: X<sub>j</sub> = &sum; p<sub>j</sub> - 0.5p<sub>j</sub>. Based on this ranking, ACI can be calculated as:</p>
+
+<p>(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACI = &sum;<sub>j</sub> p<sub>j</sub> (2X<sub>j</sub> - 1) y<sub>j</sub>,</p>
+
+<p>where y<sub>j</sub> indicates the estimate for subgroup j, p<sub>j</sub> the population share of subgroup j and X<sub>j </sub>the relative rank of subgroup j.</p>
+
+<p>ACI is calculated for ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, ACI takes the value zero. Positive values indicate a concentration of the health indicator among the advantaged, while negative values indicate a concentration of the health indicator among the disadvantaged. The larger the absolute value of ACI, the higher the level of inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.2 Between-group standard variation" name="3.1.2 Between-group standard variation"></a>3.1.2 Between-group standard variation</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The between-group standard variation (BGSD) is a complex, weighted measure of inequality.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>BGSD is calculated as the square root of the weighted sum of squared differences between the subgroup estimates y<sub>j</sub> and the national average &mu;. Squared differences are weighted by each subgroup&rsquo;s population share p<sub>j</sub>:</p>
+
+<p>(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BGSD = &radic; [&sum;<sub>j</sub> p<sub>j</sub> (y<sub>j</sub> - &mu;)<sup>2</sup>].</p>
+
+<p>BGSD is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>BGSD takes only positive values with larger values indicating higher levels of inequality. BGSD is zero if there is no inequality. BGSD is more sensitive to outlier estimates as it gives more weight to the estimates that are further from the national average.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.3 Between-group variance" name="3.1.3 Between-group variance"></a>3.1.3 Between-group variance</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The between-group variance (BGV) is a complex, weighted measure of inequality.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>BGV is calculated as the weighted sum of squared differences between the subgroup estimates y<sub>j</sub> and the national average &mu;. Squared differences are weighted by each subgroup&rsquo;s population share p<sub>j</sub>:</p>
+
+<p>(3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BGV = &sum;<sub>j</sub> p<sub>j</sub> (y<sub>j</sub> - &mu;)<sup>2</sup>.</p>
+
+<p>BGV is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>BGV takes only positive values with larger values indicating higher levels of inequality. BGV is zero if there is no inequality. BGV is more sensitive to outlier estimates as it gives more weight to the estimates that are further from the national average.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.4 Difference" name="3.1.4 Difference"></a>3.1.4 Difference</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The difference (D) is a simple, unweighted measure of inequality that shows the absolute inequality between two subgroups.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>D is calculated as the difference between two subgroups:</p>
+
+<p>(4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D = y<sub>high</sub> - y<sub>low</sub>.</p>
+
+<p>Note that the selection of y<sub>high</sub> and y<sub>low</sub> depends on the type of health indicator and on the characteristics of the dimension of inequality, for which D is calculated.<a href="#Footnote 4">[4]</a></p>
+
+<p>For binary dimensions with a selected reference subgroup, y<sub>high</sub> refers to the reference subgroup and y<sub>low</sub> to the subgroup that maximizes the absolute difference in the case of favourable indicators, and vice versa in the case of adverse indicators.</p>
+
+<p>For binary dimensions without a selected reference subgroup, y<sub>high</sub> refers to the subgroup with the highest estimate and y<sub>low</sub> to the subgroup with the lowest estimate, regardless of the indicator type.</p>
+
+<p>For ordered dimensions, y<sub>high</sub> refers to the most-advantaged subgroup and y<sub>low</sub> to the most-disadvantaged subgroup in the case of favourable indicators, and vice versa in the case of adverse indicators.</p>
+
+<p>For non-ordered with a selected reference subgroup, y<sub>high</sub> refers to the reference subgroup and y<sub>low</sub> to the subgroup that maximizes the absolute difference in the case of favourable indicators, and vice versa in the case of adverse indicators.</p>
+
+<p>For non-ordered without a selected reference subgroup, y<sub>high</sub> refers to the subgroup with the highest estimate and y<sub>low</sub> to the subgroup with the lowest estimate, regardless of the indicator type.</p>
+
+<p>D is calculated for all dimensions of inequality. In the case of binary and non-ordered dimensions, D is missing if at least one subgroup estimate is missing. In the case of ordered dimensions, D is missing if the estimates for the most-advantaged and/or most-disadvantaged subgroup are missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, D takes the value zero. Greater absolute values indicate higher levels of inequality. For favourable health intervention indicators, positive values indicate higher coverage in the advantaged subgroups and negative values indicate higher coverage in the disadvantaged subgroups. For adverse health outcome indicators, positive values indicate a higher concentration of the indicator among the disadvantaged and negative values indicate a higher concentration among the advantaged.</p>
+
+<p><strong>Other calculations</strong></p>
+
+<p>For non-ordered dimensions with more than 30 subgroups, additional difference measures are calculated, including:</p>
+<ul>
+	<li>Difference between percentile 80 and percentile 20,</li>
+	<li>Difference between the mean estimates in quintile 5 and quintile 1.</li>
+</ul>
+<p>In addition, for non-ordered dimensions with more than 60 subgroups, the following difference measures are calculated:</p>
+<ul>
+	<li>Difference between percentile 90 and percentile 10,</li>
+	<li>Difference between the mean estimates in decile 10 and decile 1.</li>
+</ul>
+<p>Finally, for non-ordered dimensions with more than 100 subgroups, the following difference measures are also calculated:</p>
+<ul>
+	<li>Difference between percentile 95 and percentile 5,</li>
+	<li>Difference between the mean estimates in the top 5% and the bottom 5%.</li>
+</ul>
+<p>These measures are displayed in the <em>Explore Inequality – Disaggregated data (detailed bar graphs)</em> tab, provided a non-ordered dimension with at least 30 subgroups has been selected.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.5 Population attributable risk" name="3.1.5 Population attributable risk"></a>3.1.5 Population attributable risk</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The population attributable risk (PAR) is a complex, weighted measure of inequality that shows the potential for improvement in the national level of a health indicator that could be achieved if all subgroups had the same level of health as a reference subgroup.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>PAR is calculated as the difference between the estimate for the reference subgroup y<sub>ref</sub> and the national average &mu; :</p>
+
+<p>(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAR = y<sub>ref</sub> - &mu;.</p>
+
+<p>Note that the selection of the reference subgroup y<sub>ref</sub> depends on the type of health indicator and on the characteristics of the dimension of inequality, for which PAR is calculated.<a href="#Footnote 5">[5]</a></p>
+
+<p>For binary dimensions, y<sub>ref</sub> either refers to the selected reference subgroup or, if no reference subgroup has been selected, y<sub>ref</sub> refers to the subgroup with the highest estimate in the case of favourable indicators and to the subgroup with the lowest estimate in the case of adverse indicators.</p>
+
+<p>For ordered dimensions, y<sub>ref</sub> refers to the most-advantaged subgroup, regardless of the indicator type.</p>
+
+<p>For non-ordered dimensions, y<sub>ref</sub> either refers to the selected reference subgroup or, if no reference subgroup has been selected, y<sub>ref</sub> refers to the subgroup with the highest estimate in the case of favourable indicators and to the subgroup with the lowest estimate in the case of adverse indicators.</p>
+
+<p>PAR is calculated for all dimensions. In the case of binary and ordered dimensions, PAR is missing if the estimate for the reference subgroup or if the population share for at least one subgroup is missing. In the case of non-ordered dimensions, PAR is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>PAR takes positive values for favourable health intervention indicators and negative values for adverse health outcome indicators. The larger the absolute value of PAR, the higher the level of inequality. PAR is zero if no further improvement can be achieved, i.e. if all subgroups have reached the same level of health as the reference subgroup.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.6 Slope index of inequality" name="3.1.6 Slope index of inequality"></a>3.1.6 Slope index of inequality</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The slope index of inequality (SII) is a complex, weighted measure of inequality that represents the absolute difference in estimated values of a health indicator between the most-advantaged and most-disadvantaged (or vice versa for adverse health outcome indicators), while taking into consideration all the other subgroups &ndash; using an appropriate regression model.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>To calculate SII, a weighted sample of the whole population is ranked from the most-disadvantaged subgroup (at rank zero or 0) to the most-advantaged subgroup (at rank 1). This ranking is weighted, accounting for the proportional distribution of the population within each subgroup. The population of each subgroup is then considered in terms of its range in the cumulative population distribution, and the midpoint of this range. According to the definition currently used in HEAT, the health indicator of interest is then regressed against this midpoint value using a generalized linear model with logit link, and the predicted values of the health indicator are calculated for the two extremes (rank 1 and rank 0).</p>
+
+<p>For favourable health intervention indicators, the difference between the estimated values at rank 1 (v<sub>1</sub>) and rank 0 (v<sub>0</sub>) (covering the entire distribution) generates the SII value:</p>
+
+<p>(6a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SII = v<sub>1</sub> - v<sub>0</sub>.</p>
+
+<p>&nbsp;</p>
+
+<p>For adverse health outcome indicators, the calculation is reversed and the SII value is calculated as the difference between the estimated values at rank 0 (v<sub>0</sub>) and rank 1 (v<sub>1</sub>) (covering the entire distribution):</p>
+
+<p>(6b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SII = v<sub>0</sub> - v<sub>1</sub>.</p>
+
+<p>SII is calculated for ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, SII takes the value zero. Greater absolute values indicate higher levels of inequality. For favourable health intervention indicators, positive values indicate higher coverage in the advantaged subgroups and negative values indicate higher coverage in the disadvantaged subgroups. For adverse health outcome indicators, positive values indicate a higher concentration of the indicator among the disadvantaged and negative values indicate a higher concentration among the advantaged.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.7 Unweighted mean difference from best performing subgroup" name="3.1.7 Unweighted mean difference from best performing subgroup"></a>3.1.7 Unweighted mean difference from best performing subgroup</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The unweighted mean difference from best performing subgroup (MDBU) is a complex, unweighted measure of inequality that shows the difference between each subgroup and a reference subgroup, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>MDBU is calculated as the sum of absolute differences between the subgroup estimates y<sub>j</sub> and the estimate for the reference subgroup y<sub>ref</sub>:</p>
+
+<p>(7)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MDBU = &sum;<sub>j</sub> |y<sub>j</sub> - y<sub>ref</sub>|.</p>
+
+<p>y<sub>ref</sub> refers to the subgroup with the highest estimate in the case of favourable health intervention indicators and to the subgroup with the lowest estimate in the case of adverse health outcome indicators.</p>
+
+<p>MDBU is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate is missing. Note that the 95% confidence intervals calculated for MDBU are simulation-based estimates.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>MDBU takes only positive values with larger values indicating higher levels of inequality. MDBU is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.8 Unweighted mean difference from mean" name="3.1.8 Unweighted mean difference from mean"></a>3.1.8 Unweighted mean difference from mean</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The unweighted mean difference from mean (MDMU) is a complex measure of inequality that shows the difference between each subgroup and the national level, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>MDMU is calculated as the sum of absolute differences between the subgroup estimates y<sub>j</sub> and the national average &mu;:</p>
+
+<p>(8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MDMU = &sum;<sub>j</sub> |y<sub>j</sub> - &mu;|.</p>
+
+<p>MDMU is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing. Note that the 95% confidence intervals calculated for MDMU are simulation-based estimates.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>MDMU takes only positive values with larger values indicating higher levels of inequality. MDMU is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.9 Weighted mean difference from best performing subgroup" name="3.1.9 Weighted mean difference from best performing subgroup"></a>3.1.9 Weighted mean difference from best performing subgroup</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The weighted mean difference from best performing subgroup (MDBW) is a complex, weighted measure of inequality that shows the difference between each subgroup and a reference subgroup, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>MDBW is calculated as the weighted sum of absolute differences between the subgroup estimates y<sub>j</sub> and the estimate for the reference subgroup y<sub>ref</sub>. Absolute differences are weighted by each subgroup&rsquo;s population share p<sub>j</sub>:</p>
+
+<p>(9)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MDBW = &sum;<sub>j</sub> p<sub>j</sub> |y<sub>j</sub> - y<sub>ref</sub>|.</p>
+
+<p>y<sub>ref</sub> refers to the subgroup with the highest estimate in the case of favourable health intervention indicators and to the subgroup with the lowest estimate in the case of adverse health outcome indicators.</p>
+
+<p>MDBW is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing. Note that the 95% confidence intervals calculated for MDBW are simulation-based estimates.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>MDBW takes only positive values with larger values indicating higher levels of inequality. MDBW is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.1.10 Weighted mean difference from mean" name="3.1.10 Weighted mean difference from mean"></a>3.1.10 Weighted mean difference from mean</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The weighted mean difference from mean (MDMW) is a complex, weighted measure of inequality that shows the difference between each subgroup and the national level, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>MDMW is calculated as the weighted sum of absolute differences between the subgroup estimates y<sub>j</sub> and the national average &mu;. Absolute differences are weighted by each subgroup&rsquo;s population share p<sub>j</sub>:</p>
+
+<p>(10)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MDMW = &sum;<sub>j</sub> p<sub>j</sub> |y<sub>j</sub> - &mu;|.</p>
+
+<p>MDMW is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing. Note that the 95% confidence intervals calculated for MDMW are simulation-based estimates.&nbsp;&nbsp;</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>MDMW takes only positive values with larger values indicating higher levels of inequality. MDMW is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h3><a id="3.2 Relative measures" name="3.2 Relative measures"></a>3.2 Relative measures</h3>
+
+<h4><a id="3.2.1 Coefficient of variation" name="3.2.1 Coefficient of variation"></a>3.2.1 Coefficient of variation</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The coefficient of variation (COV) is a complex, weighted measure of inequality.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>COV is calculated by dividing the between-group standard deviation (BGSD) by the national average &mu; and multiplying the fraction by 100:</p>
+
+<p>(11)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COV = [BGSD / &mu;] * 1000.</p>
+
+<p>COV is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>COV takes only positive values with larger values indicating higher levels of inequality. COV is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.2 Mean log deviation" name="3.2.2 Mean log deviation"></a>3.2.2 Mean log deviation</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The mean log deviation (MLD) is a complex, weighted measure of inequality.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>MLD is calculated as the sum of products between the negative natural logarithm of the share of health of each subgroup (-ln(y<sub>j</sub>/&mu;)) and the population share of each subgroup (p<sub>j</sub>). MLD may be more easily interpreted when multiplied by 1000:</p>
+
+<p>(12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MLD = [&sum;<sub>j</sub> p<sub>j</sub> (-ln(y<sub>j</sub>/&mu;))] * 1000,</p>
+
+<p>where y<sub>j</sub> indicates the estimate for subgroup j, p<sub>j</sub> the population share of subgroup j and &mu; the national average.</p>
+
+<p>MLD is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, MLD takes the value zero. Greater absolute values indicate higher levels of inequality. MLD is more sensitive to health differences further from the national average (by the use of the logarithm).</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.3 Population attributable fraction" name="3.2.3 Population attributable fraction"></a>3.2.3 Population attributable fraction</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The population attributable fraction (PAF) is a complex, weighted measure of inequality that shows the potential for improvement in the national level of a health indicator, in relative terms, that could be achieved if all subgroups had the same level of health as a reference subgroup.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>PAF is calculated by dividing the population attributable risk (PAR) by the national average &mu; and multiplying the fraction by 100:</p>
+
+<p>(13)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAF = [PAR / &mu;] * 100.</p>
+
+<p>PAF is calculated for all dimensions. In the case of binary and ordered dimensions, PAF is missing if the estimate for the reference subgroup or if the population share for at least one subgroup is missing. In the case of non-ordered dimensions, PAF is missing if at least one subgroup estimate or subgroup population share&nbsp;is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>PAF takes positive values for favourable health intervention indicators and negative values for adverse health outcome indicators. The larger the absolute value of PAF, the larger the degree of inequality. PAF is zero if no further improvement can be achieved, i.e. if all subgroups have reached the same level of health as the reference subgroup.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.4 Ratio" name="3.2.4 Ratio"></a>3.2.5 Ratio</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The ratio (R) is a simple, unweighted measure of inequality that shows the relative inequality between two subgroups.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>R is calculated as the ratio of two subgroups:</p>
+
+<p>(14)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R = y<sub>high</sub> / y<sub>low</sub>.</p>
+
+<p>Note that the selection of y<sub>high</sub> and y<sub>low</sub> depends on the type of health indicator and on the characteristics of the dimension of inequality, for which R is calculated.<a href="#Footnote 6">[6] </a></p>
+
+<p>For binary dimensions with a selected reference subgroup, y<sub>high</sub> refers to the reference subgroup and y<sub>low</sub> to the subgroup that maximizes the absolute difference in the case of favourable indicators, and vice versa in the case of adverse indicators. </p>
+
+<p>For binary dimensions without a selected reference subgroup, y<sub>high</sub> refers to the subgroup with the highest estimate and y<sub>low</sub> to the subgroup with the lowest estimate, regardless of the indicator type.</p>
+
+<p>For ordered dimensions, y<sub>high</sub> refers to the most-advantaged subgroup and y<sub>low</sub> to the most-disadvantaged subgroup in the case of favourable indicators, and vice versa in the case of adverse indicators. </p>
+
+<p>For non-ordered with a selected reference subgroup, y<sub>high</sub> refers to the reference subgroup and y<sub>low</sub> to the subgroup that maximizes the absolute difference in the case of favourable indicators, and vice versa in the case of adverse indicators. </p>
+
+<p>For non-ordered without a selected reference subgroup, y<sub>high</sub> refers to the subgroup with the highest estimate and y<sub>low</sub> to the subgroup with the lowest estimate, regardless of the indicator type.</p>
+
+<p>R is calculated for all dimensions of inequality. In the case of binary and non-ordered dimensions, R is missing if at least one subgroup estimate is missing. In the case of ordered dimensions, R is missing if the estimates for the most-advantaged and/or most-disadvantaged subgroup are missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, R takes the value one. It takes only positive values (larger or smaller than 1). The further the value of R from 1, the higher the level of inequality.</p>
+
+<p><strong>Other calculations</strong></p>
+
+<p>For non-ordered dimensions with more than 30 subgroups, additional ratio measures are calculated, including:</p>
+<ul>
+	<li>Ratio of percentile 80 to percentile 20,</li>
+	<li>Ratio of the mean estimates in quintile 5 to quintile 1.</li>
+</ul>
+<p>In addition, for non-ordered dimensions with more than 60 subgroups, additional ratio measures are calculated, including:</p>
+<ul>
+	<li>Ratio of percentile 90 to percentile 10,</li>
+	<li>Ratio of the mean estimates in decile 10 to decile 1.</li>
+</ul>
+<p>Finally, for non-ordered dimensions with more than 100 subgroups, the following ratio measures are also calculated:</p>
+<ul>
+	<li>Ratio of percentile 95 to percentile 5,</li>
+	<li>Ratio of the mean estimates in the top 5% to the bottom 5%.</li>
+</ul>
+<p>These measures are displayed in the <em>Explore Inequality – Disaggregated data (detailed bar graphs)</em> tab, provided a non-ordered dimension with at least 30 subgroups has been selected.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.5 Relative concentration index" name="3.2.5 Relative concentration index"></a>3.2.5 Relative concentration index</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The relative concentration index (RCI) is a complex, weighted measure of inequality that shows the health gradient across multiple subgroups with natural ordering, on a relative scale. It indicates the extent to which a health indicator is concentrated among the disadvantaged or the advantaged.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>RCI is calculated by dividing the absolute concentration index (ACI) by the national average &mu;. This fraction may be more easily interpreted when multiplied by 100:</p>
+
+<p>(15)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RCI = [ACI / &mu;] * 100.</p>
+
+<p>RCI is calculated for ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.;</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>RCI is bounded between -1 and +1 (or -100 and +100 if multiplied by 100) and takes the value zero if there is no inequality. Positive values indicate a concentration of the health indicator among the advantaged, while negative values indicate a concentration of the health indicator among the disadvantaged. The greater the absolute value of RCI, the higher the level of inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.6 Relative index of inequality" name="3.2.6 Relative index of inequality"></a>3.2.6 Relative index of inequality</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The relative index of inequality (RII) is a complex, weighted measure of inequality that represents the ratio of estimated values of a health indicator of the most-advantaged to the most-disadvantaged (or vice versa for adverse health outcome indicators), while taking into consideration all the other subgroups &ndash; using an appropriate regression model.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>To calculate RII, a weighted sample of the whole population is ranked from the most-disadvantaged subgroup (at rank zero or 0) to the most-advantaged subgroup (at rank 1). This ranking is weighted, accounting for the proportional distribution of the population within each subgroup. The population of each subgroup is then considered in terms of its range in the cumulative population distribution, and the midpoint of this range. According to the definition currently used in HEAT, the health indicator of interest is then regressed against this midpoint value using a generalized linear model with logit link, and the predicted values of the health indicator are calculated for the two extremes (rank 1 and rank 0).</p>
+
+<p>For favourable health intervention indicators, the ratio of the estimated values at rank 1 (v<sub>1</sub>) to rank 0 (v<sub>0</sub>) (covering the entire distribution) generates the RII value:</p>
+
+<p>(16a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RII = v<sub>1</sub> / v<sub>0</sub>.</p>
+
+<p>For adverse health outcome indicators, the calculation is reversed and the RII value is calculated as the ratio of the estimated values at rank 0 (v<sub>0</sub>) to rank 1 (v<sub>1</sub>) (covering the entire distribution):</p>
+
+<p>(16b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RII = v<sub>0</sub> / v<sub>1</sub>.</p>
+
+<p>RII is calculated for ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, RII takes the value one. RII takes only positive values, with values larger than one indicating a concentration of the indicator among the advantaged and values smaller than one indicating a concentration of the indicator among the disadvantaged. The further the value of RII from one, the higher the level of inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.7 Theil index" name="3.2.7 Theil index"></a>3.2.7 Theil index</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The theil index (TI) is a complex, weighted measure of inequality.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>TI is calculated as the sum of products of the natural logarithm of the share of health of each subgroup (ln(y<sub>j</sub>/&mu;)), the share of health of each subgroup (y<sub>j</sub>/&mu;) and the population share of each subgroup (p<sub>j</sub>). TI may be more easily interpreted when multiplied by 1000:</p>
+
+<p>(17)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TI = [&sum;<sub>j</sub> p<sub>j</sub> (y<sub>j</sub>/&mu;) ln(y<sub>j</sub>/&mu;)] * 1000,</p>
+
+<p>where y<sub>j</sub> indicates the estimate for subgroup j, p<sub>j</sub> the population share of subgroup j and &mu; the national average.</p>
+
+<p>TI is calculated for non-ordered dimensions with more than two subgroups. It is missing if at least one subgroup estimate or subgroup population share is missing.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>If there is no inequality, TI takes the value zero. Greater absolute values indicate higher levels of inequality. TI is more sensitive to health differences further from the national average (by the use of the logarithm).</p>
+
+<p style="text-align: right;"><a href="#Top">Back to top</a></p>
+
+<h4><a id="3.2.8 Unweighted index of disparity" name="3.2.8 Unweighted index of disparity"></a>3.2.8 Unweighted index of disparity</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The unweighted index of disparity (IDISU) is a complex, unweighted measure of inequality that shows the proportional difference between each subgroup and the national level, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>IDISU is calculated as the absolute sum of differences between the subgroup estimates y<sub>j</sub> and the national average &mu;, divided by the national average &mu; and the number of subgroups n:</p>
+
+<p>(18)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDISU = 1/n * [(&sum;<sub>j</sub> |y<sub>j</sub> - &mu;|) / &mu;] * 100.</p>
+
+<p>IDISU is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing. Note that the 95% confidence intervals calculated for IDISU are simulation-based estimates.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>IDISU takes only positive values with larger values indicating higher levels of inequality. IDISU is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<h4><a id="3.2.9 Weighted index of disparity" name="3.2.9 Weighted index of disparity"></a>3.2.9 Weighted index of disparity</h4>
+
+<p><strong>Definition</strong></p>
+
+<p>The weighted index of disparity (IDISW) is a complex, weighted measure of inequality that shows the proportional difference between each subgroup and the national average, on average.</p>
+
+<p><strong>Calculation</strong></p>
+
+<p>IDISW is calculated as the weighted absolute sum of differences between the subgroup estimates y<sub>j</sub> and the national average &mu;, divided by the national average &mu;. Absolute differences are weighted by each subgroup&rsquo;s population share p<sub>j</sub>:</p>
+
+<p>(19)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDISW = [(&sum;<sub>j</sub> p<sub>j</sub> |y<sub>j</sub> - &mu;|) / &mu;] * 100.</p>
+
+<p>IDISW is calculated for non-ordered dimensions. It is missing if at least one subgroup estimate or subgroup population share is missing. Note that the 95% confidence intervals calculated for IDISW are simulation-based estimates.</p>
+
+<p><strong>Interpretation</strong></p>
+
+<p>IDISW takes only positive values with larger values indicating higher levels of inequality. IDISW is zero if there is no inequality.</p>
+
+<p style="text-align: right;"><a href="#Top" style="text-align: right;">Back to top</a></p>
+
+<hr />
+<p><span style="font-size:12px;"><a id="Footnote 1" name="Footnote 1">[1] </a>One exception to this is the between-group variance (BGV), which takes the squared unit of the health indicator.</span></p>
+
+<p><span style="font-size:12px;"><a id="Footnote 2" name="Footnote 2">[2] </a>Exceptions to this are the population attributable risk (PAR) and the population attributable fraction (PAF), which can be calculated for all dimensions of inequality.</span></p>
+
+<p><span style="font-size:12px;"><a id="Footnote 3" name="Footnote 3">[3] </a>Non-ordered complex measures could also be calculated for ordered dimensions, however, in practice, they are not used for such dimensions and are therefore only reported for non-ordered dimensions.</span></p>
+
+<p><span style="font-size:12px;"><a id="Footnote 4" name="Footnote 4">[4] </a>Selections were made based on convenience of data interpretation (that is, providing positive values for difference calculations). In the case of sex, the selection does not represent an assumed advantage of one sex over the other.</span></p>
+
+<p><span style="font-size:12px;"><a id="Footnote 5" name="Footnote 5">[5] </a>Selections were made based on convenience of data interpretation. In the case of sex, the selection does not represent an assumed advantage of one sex over the other.</span></p>
+
+<p><span style="font-size:12px;"><a id="Footnote 6" name="Footnote 6">[6] </a>Selections were made based on convenience of data interpretation (that is, providing values above one for ratio calculations). In the case of sex, the selection does not represent an assumed advantage of one sex over the other.</span></p>
+
+</div>

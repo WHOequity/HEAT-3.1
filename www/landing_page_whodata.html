@@ -1,0 +1,72 @@
+<!--
+© Copyright World Health Organization (WHO) 2016-2018.
+This file is part of the Health Equity Assessment Toolkit (HEAT).
+HEAT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License Version 2 
+as published by the Free Software Foundation.
+
+HEAT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with HEAT. If not, see http://www.gnu.org/licenses/.
+-->
+
+<script type="text/javascript">
+//$(document).ready(function() {
+ //   $("#myModal").modal('show');
+   // $("#modal-license").load("license_agreement.html");
+//});
+
+</script>
+<!-- 
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Terms of use and software license agreement</h4>
+            </div>
+            <div class="modal-body" >
+            <div id="modal-license">
+                
+                </div>
+                <button type="submit" class="btn btn-primary" data-dismiss="modal">I accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div id="backimg-whodata">
+    <!--<div class="container backimg">-->
+    <div class="row belowbars">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 text-center">
+                <div class="jumbotron welltrans">
+                    <h1 id="heat_landing_title" class="landing shiny-text-output">{{ translate("heat_landing_title", "english") }}</h1>
+                    <h1 class="landing">({{ translationOutput("heat_landing_acronym", class = "subhead") }})</h1>
+                    <p id="heat_landing_subtitle" class="lead shiny-text-output">
+                      {{ translate("heat_landing_subtitle", "english") }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            {{ translationOutput("heat_landing_body", html = TRUE) }}
+            <p class="citation">
+              <em>{{ translationOutput("heat_landing_citation", html = TRUE ) }}</em>
+            </p>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+         
+        

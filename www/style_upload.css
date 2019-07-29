@@ -1,0 +1,38 @@
+/*
+© Copyright World Health Organization (WHO) 2016.
+This file is part of the Health Equity Assessment Toolkit (HEAT).
+HEAT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License Version 2 as published by
+the Free Software Foundation.
+
+HEAT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with HEAT. If not, see http://www.gnu.org/licenses/.
+*/
+
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+
+        background-color:  rgba(181, 230, 20, 0.8);
+    background-position: 0 -1690px;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+h1.landing .subhead{
+	color: rgb(34, 177, 76);
+	text-shadow: 1px 1px rgb(224, 247, 150);
+}
+
+
+
+.disclaimer{
+  font-weight: bold;
+  color:orange;
+}
